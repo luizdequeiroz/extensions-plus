@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ExtensionsPlus</id>
+    <version>1.0.0-beta</version>
+    <title>Extensions utilitários para reuso de implementações genéricas em .Net.</title>
+    <authors>Luiz de Queiroz</authors>
+    <owners>Luiz de Queiroz</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/luizdequeiroz/extensions-plus</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extensions utilitários para reuso de implementações genéricas de algoritmos que solucionam diversas situações de programação em .Net.</description>
+    <!-- <releaseNotes></releaseNotes> -->
+    <copyright>Copyright 2019</copyright>
+    <tags>csharp, extension, plus, enum, comparer, equality</tags>
+  </metadata>
+</package>

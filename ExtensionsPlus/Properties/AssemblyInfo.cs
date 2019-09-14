@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ExtensionsPlus")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Extensions utilitários para reuso de implementações genéricas de algoritmos que solucionam diversas situações de programação em .Net.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Luiz de Queiroz")]
 [assembly: AssemblyProduct("ExtensionsPlus")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
