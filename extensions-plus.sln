@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsPlus", "ExtensionsPlus\ExtensionsPlus.csproj", "{F2168A57-17D6-4201-BEFB-214A03EA7FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionsPlus.Tests", "ExtensionsPlus.Tests\ExtensionsPlus.Tests.csproj", "{55A56288-6576-4915-9C0B-8C1133E9F927}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionsPlus.Tests", "ExtensionsPlus.Tests\ExtensionsPlus.Tests.csproj", "{55A56288-6576-4915-9C0B-8C1133E9F927}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

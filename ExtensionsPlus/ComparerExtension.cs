@@ -25,7 +25,7 @@ namespace ExtensionsPlus
                 foreach (var propertyX in x.GetType().GetProperties())
                     foreach (var propertyY in y.GetType().GetProperties())
                         if (propertyX.Name == propertyY.Name)
-                            if (propertyX.GetValue(x, null)?.ToString() == propertyY.GetValue(y, null)?.ToString())
+                            if (propertyX.GetValue(x)?.ToString() == propertyY.GetValue(y)?.ToString())
                                 equalsCount++;
 
                 return propertiesCount == equalsCount;
@@ -39,8 +39,8 @@ namespace ExtensionsPlus
 
                 foreach (var property in e.GetType().GetProperties())
                 {
-                    var value = property.GetValue(e, null);
-                    var hashCode = (value != null ? property.GetValue(e, null).GetHashCode() : 0);
+                    var value = property.GetValue(e);
+                    var hashCode = (value != null ? property.GetValue(e).GetHashCode() : 0);
                     if (hashCodeObject == 0) hashCodeObject = hashCode;
                     else hashCodeObject ^= hashCode;
                 }

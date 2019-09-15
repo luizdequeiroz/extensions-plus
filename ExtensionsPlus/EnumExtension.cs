@@ -21,18 +21,25 @@ namespace ExtensionsPlus
 
         public static T ToEnumIndex<T>(this string description)
         {
-            string[] values = Enum.GetNames(typeof(T));
-
-            for (int i = 0; i < values.Length; i++)
+            if (!string.IsNullOrEmpty(description))
             {
-                FieldInfo oFieldInfo = typeof(T).GetField(values[i]);
-                object[] attributes = oFieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), true);
-                if (attributes.Length > 0)
-                    if (((DescriptionAttribute)attributes[0]).Description.ToUpper() == description.ToUpper() || values[i] == description)
-                        return (T)Convert.ChangeType(Enum.ToObject(typeof(T), i + 1), typeof(T));
-            }
+                string[] values = Enum.GetNames(typeof(T));
 
-            return (T)Convert.ChangeType(typeof(T).GetField(description).GetValue(typeof(T)), typeof(T));
+                for (int i = 0; i < values.Length; i++)
+                {
+                    FieldInfo oFieldInfo = typeof(T).GetField(values[i]);
+                    object[] attributes = oFieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), true);
+                    if (attributes.Length > 0)
+                        if (((DescriptionAttribute)attributes[0]).Description.ToUpper() == description.ToUpper() || values[i] == description)
+                            return (T)Convert.ChangeType(Enum.ToObject(typeof(T), i + 1), typeof(T));
+                }
+
+                return (T)Convert.ChangeType(typeof(T).GetField(description).GetValue(typeof(T)), typeof(T));
+            }
+            else
+            {
+                return (T)Convert.ChangeType(Enum.ToObject(typeof(T), 1), typeof(T));
+            }
         }
     }
 }

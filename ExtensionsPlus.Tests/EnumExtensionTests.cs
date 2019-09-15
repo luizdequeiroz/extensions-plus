@@ -20,13 +20,15 @@ namespace ExtensionsPlus.Tests
             DC_UNIVERSE = 6
         }
 
-        [Fact(DisplayName = "Testing enum get by description")]
-        public void TestingEnumGetByDescription()
+        [Theory(DisplayName = "Testing enum get by description")]
+        [InlineData("Disney+")]
+        [InlineData("")]
+        [InlineData(null)]
+        public void TestingEnumGetByDescription(string enumDescription)
         {
-            var enumDescription = "Disney+";
             var enumIndex = enumDescription.ToEnumIndex<Streamers>();
 
-            Assert.Equal((int)Streamers.DISNEY_PLUS, (int)enumIndex);
+            Assert.Equal(string.IsNullOrEmpty(enumDescription) ? (int)Streamers.NETFLIX : (int)Streamers.DISNEY_PLUS, (int)enumIndex);
         }
 
         [Fact(DisplayName = "Testing enum get by enum name")]
