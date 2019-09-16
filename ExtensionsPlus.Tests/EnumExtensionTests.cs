@@ -28,7 +28,7 @@ namespace ExtensionsPlus.Tests
         {
             var enumIndex = enumDescription.ToEnumIndex<Streamers>();
 
-            Assert.Equal(string.IsNullOrEmpty(enumDescription) ? (int)Streamers.NETFLIX : (int)Streamers.DISNEY_PLUS, (int)enumIndex);
+            Assert.Equal(string.IsNullOrEmpty(enumDescription) ? 0 : (int)Streamers.DISNEY_PLUS, (int)enumIndex);
         }
 
         [Fact(DisplayName = "Testing enum get by enum name")]

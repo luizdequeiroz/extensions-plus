@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExtensionsPlus.Tests.Models;
+using System;
 using Xunit;
 using static ExtensionsPlus.ComparerExtension;
 
@@ -6,14 +7,6 @@ namespace ExtensionsPlus.Tests
 {
     public class ComparerExtensionTests
     {
-        class User
-        {
-            public Guid Id { get; set; }
-            public string Username { get; set; }
-            public string Email { get; set; }
-            public string Phone { get; set; }
-        }
-
         [Fact(DisplayName = "Testing equality between users with extension")]
         public void TestingEqualityBetweenUsersWithExtension()
         {

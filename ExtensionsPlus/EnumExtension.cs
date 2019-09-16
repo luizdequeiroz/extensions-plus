@@ -38,7 +38,7 @@ namespace ExtensionsPlus
             }
             else
             {
-                return (T)Convert.ChangeType(Enum.ToObject(typeof(T), 1), typeof(T));
+                return (T)Convert.ChangeType(Enum.ToObject(typeof(T), 0), typeof(T));
             }
         }
     }
