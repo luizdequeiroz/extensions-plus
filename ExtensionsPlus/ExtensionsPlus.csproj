@@ -2,7 +2,7 @@
   
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.0-beta3</Version>
+    <Version>1.0.0-beta4</Version>
     <Authors>Luiz de Queiroz</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
@@ -14,6 +14,10 @@
     <RepositoryUrl>https://github.com/luizdequeiroz/extensions-plus.git</RepositoryUrl>
     <PackageTags>csharp, extension, plus, enum, comparer, equality</PackageTags>
     <NeutralLanguage>pt-BR</NeutralLanguage>
+    <PackageReleaseNotes>ComparerExtension, to compare objects using a generic comparer that implements IEqualityComparer.
+ConverterExtension, to convert IEnumerable &lt;&gt; to DataTable.
+EnumExtension, to take a defined enum Description string and get the enum index of the enum string or Description string.
+ObjectsExtension for reflection between objects.</PackageReleaseNotes>
   </PropertyGroup>
   
   <ItemGroup>
