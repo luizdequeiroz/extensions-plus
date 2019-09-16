@@ -1,7 +1,6 @@
 ﻿using ExtensionsPlus.Tests.Models;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using Xunit;
 using static ExtensionsPlus.ComparerExtension;
