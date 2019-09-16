@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ExtensionsPlus</id>
-    <version>1.0.0-beta1</version>
+    <version>1.0.0-beta3</version>
     <title>Extensions utilitários para reuso de implementações genéricas em .Net.</title>
     <authors>Luiz de Queiroz</authors>
     <owners>Luiz de Queiroz</owners>
