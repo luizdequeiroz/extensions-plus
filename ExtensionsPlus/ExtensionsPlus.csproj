@@ -15,5 +15,9 @@
     <PackageTags>csharp, extension, plus, enum, comparer, equality</PackageTags>
     <NeutralLanguage>pt-BR</NeutralLanguage>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="ExtensionsPlus.nuspec" />
+  </ItemGroup>
 
 </Project>
