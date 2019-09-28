@@ -59,5 +59,57 @@ namespace ExtensionsPlus.Tests
             Assert.Equal(userFrom.Email, clientTo.Email);
             Assert.Equal(userFrom.Phone, clientTo.Phone);
         }
+
+        [Fact(DisplayName = "Testing applying different properties from object to other object")]
+        public void TestingApplyingDifferentPropertiesFromObjectToOtherObject()
+        {
+            var userPayload = new User
+            {
+                Username = "user_payload",
+                Email = "user@payload.com",
+                Phone = null
+            };
+
+            var userTarget = new User
+            {
+                Id = Guid.NewGuid(),
+                Username = "user_target",
+                Email = "user@target.com",
+                Phone = "0800 000 1111"
+            };
+
+            userTarget.SetDifferentProperties(userPayload);
+
+            Assert.False(userTarget.Id.ToString() == Guid.Empty.ToString());
+            Assert.Equal(userPayload.Username, userTarget.Username);
+            Assert.Equal(userPayload.Email, userTarget.Email);
+            Assert.Equal("0800 000 1111", userTarget.Phone);
+        }
+
+        [Fact(DisplayName = "Testing applying different properties from object to different object")]
+        public void TestingApplyingDifferentPropertiesFromObjectToDifferentObject()
+        {
+            var userPayload = new User
+            {
+                Username = "user_payload",
+                Email = "user@payload.com",
+                Phone = null
+            };
+
+            var clientTarget = new Client
+            {
+                Id = Guid.NewGuid(),
+                Username = "client_target",
+                Email = "client@target.com",
+                Phone = "0800 000 1111"
+            };
+
+            clientTarget.SetDifferentProperties(userPayload);
+
+            Assert.False(clientTarget.Id.ToString() == Guid.Empty.ToString());
+            Assert.Equal(userPayload.Username, clientTarget.Username);
+            Assert.Equal(userPayload.Email, clientTarget.Email);
+            Assert.Equal("0800 000 1111", clientTarget.Phone);
+        }
     }
 }

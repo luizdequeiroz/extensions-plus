@@ -32,8 +32,8 @@ namespace ExtensionsPlus.Tests
 
             var dataTableUser = users.ToDataTable();
 
-            Assert.Equal(users.First().Id, (Guid)dataTableUser.Rows[0][0], new GenericComparer<Guid>());
-            Assert.Equal(users.Last().Id, (Guid)dataTableUser.Rows[1][0], new GenericComparer<Guid>());
+            Assert.Equal(users.First().Id.Value, (Guid)dataTableUser.Rows[0][0], new GenericComparer<Guid>());
+            Assert.Equal(users.Last().Id.Value, (Guid)dataTableUser.Rows[1][0], new GenericComparer<Guid>());
 
             Assert.Equal(users.First().Username, (string)dataTableUser.Rows[0][1]);
             Assert.Equal(users.Last().Username, (string)dataTableUser.Rows[1][1]);
